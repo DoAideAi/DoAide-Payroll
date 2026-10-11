@@ -17,7 +17,7 @@ function renderLanding() {
 }
 
 describe('LandingPage', () => {
-  it('renders hero heading with gold accent', () => {
+  it('renders hero heading with teal accent', () => {
     renderLanding();
     const headline = document.querySelector('.landing-headline');
     expect(headline).toBeInTheDocument();
@@ -124,9 +124,8 @@ describe('LandingPage', () => {
     expect(pipeline).toBeInTheDocument();
   });
 
-  it('renders hero robot SVG', () => {
-    const { container } = renderLanding();
-    const robot = container.querySelector('.landing-hero-robot');
-    expect(robot).toBeInTheDocument();
+  it('renders A DoAide Product badge in footer', () => {
+    renderLanding();
+    expect(screen.getByText('A DoAide Product')).toBeInTheDocument();
   });
 });

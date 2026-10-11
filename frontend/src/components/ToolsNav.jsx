@@ -15,7 +15,7 @@ export default function ToolsNav() {
   return (
     <nav className="tools-nav" aria-label="Payroll tools">
       <a href="https://payroll.doaide.com" className="tools-nav-brand">
-        DoAide <em>Payroll</em>
+        DoAide <span className="tools-nav-brand-separator">|</span> <em>Payroll</em>
       </a>
       <div className="tools-nav-links">
         {TOOLS.map((t) => (

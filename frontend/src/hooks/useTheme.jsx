@@ -15,9 +15,9 @@ function resolveTheme(preference) {
 export function ThemeProvider({ children }) {
   const [preference, setPreference] = useState(() => {
     try {
-      return localStorage.getItem(STORAGE_KEY) || "dark";
+      return localStorage.getItem(STORAGE_KEY) || "light";
     } catch {
-      return "dark";
+      return "light";
     }
   });
 

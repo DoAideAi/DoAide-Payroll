@@ -30,36 +30,11 @@ const TYPEWRITER_PHRASES = [
   "Professional payslips, instantly",
 ];
 
-function RobotFace({ size = 32, color }) {
+function BrandIcon({ size = 28, color = "#0D9488" }) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">
-      <line x1="16" y1="6" x2="16" y2="2" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="16" cy="1.5" r="1.5" fill={color} />
-      <rect x="5" y="6" width="22" height="17" rx="5" fill={color} />
-      <ellipse cx="11" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <ellipse cx="21" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <circle cx="11.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <circle cx="21.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <path d="M12 19Q16 22 20 19" stroke="#0A0A0B" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-      <rect x="1" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-      <rect x="27" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-    </svg>
-  );
-}
-
-function HeroRobot({ color }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100" className="landing-hero-robot" aria-hidden="true">
-      <line x1="60" y1="18" x2="60" y2="6" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="60" cy="4" r="3" fill={color} className="landing-antenna-glow" />
-      <rect x="25" y="18" width="70" height="55" rx="16" fill={color} />
-      <ellipse cx="42" cy="40" rx="8" ry="10" fill="#0A0A0B" />
-      <ellipse cx="78" cy="40" rx="8" ry="10" fill="#0A0A0B" />
-      <circle cx="44" cy="38" r="3" fill={color} opacity="0.5" />
-      <circle cx="80" cy="38" r="3" fill={color} opacity="0.5" />
-      <path d="M45 60 Q60 72 75 60" stroke="#0A0A0B" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-      <rect x="5" y="30" width="16" height="18" rx="6" fill={color} opacity="0.8" />
-      <rect x="99" y="30" width="16" height="18" rx="6" fill={color} opacity="0.8" />
+    <svg viewBox="0 0 32 32" width={size} height={size} fill="none" aria-hidden="true">
+      <rect width="32" height="32" rx="6" fill={color} />
+      <text x="5" y="23" fontFamily="Inter, system-ui" fontWeight="bold" fontSize="18" fill="#ffffff">₹</text>
     </svg>
   );
 }
@@ -98,57 +73,57 @@ function PipelineGraphic() {
   return (
     <div className="landing-pipeline" aria-hidden="true">
       <svg viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
-        <line x1="78" y1="36" x2="152" y2="36" stroke="rgba(240,180,41,0.2)" strokeWidth="2" />
-        <line x1="218" y1="36" x2="302" y2="36" stroke="rgba(240,180,41,0.2)" strokeWidth="2" />
-        <line x1="368" y1="36" x2="442" y2="36" stroke="rgba(240,180,41,0.2)" strokeWidth="2" />
+        <line x1="78" y1="36" x2="152" y2="36" stroke="rgba(13,148,136,0.2)" strokeWidth="2" />
+        <line x1="218" y1="36" x2="302" y2="36" stroke="rgba(13,148,136,0.2)" strokeWidth="2" />
+        <line x1="368" y1="36" x2="442" y2="36" stroke="rgba(13,148,136,0.2)" strokeWidth="2" />
 
-        <circle r="3" fill="#F0B429" opacity="0.8">
+        <circle r="3" fill="#0D9488" opacity="0.8">
           <animateMotion dur="2s" repeatCount="indefinite" path="M78,36 L152,36" />
         </circle>
-        <circle r="2" fill="#F7CC5F" opacity="0.5">
+        <circle r="2" fill="#14B8A6" opacity="0.5">
           <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s" path="M78,36 L152,36" />
         </circle>
-        <circle r="3" fill="#F0B429" opacity="0.8">
+        <circle r="3" fill="#0D9488" opacity="0.8">
           <animateMotion dur="2s" repeatCount="indefinite" begin="0.7s" path="M218,36 L302,36" />
         </circle>
-        <circle r="2" fill="#F7CC5F" opacity="0.5">
+        <circle r="2" fill="#14B8A6" opacity="0.5">
           <animateMotion dur="2s" repeatCount="indefinite" begin="1.2s" path="M218,36 L302,36" />
         </circle>
-        <circle r="3" fill="#F0B429" opacity="0.8">
+        <circle r="3" fill="#0D9488" opacity="0.8">
           <animateMotion dur="2s" repeatCount="indefinite" begin="1.4s" path="M368,36 L442,36" />
         </circle>
-        <circle r="2" fill="#F7CC5F" opacity="0.5">
+        <circle r="2" fill="#14B8A6" opacity="0.5">
           <animateMotion dur="2s" repeatCount="indefinite" begin="1.9s" path="M368,36 L442,36" />
         </circle>
 
         {/* Add Employees */}
-        <circle cx="50" cy="36" r="28" fill="rgba(240,180,41,0.06)" stroke="rgba(240,180,41,0.25)" strokeWidth="1.5" />
-        <path d="M44 42v-8a1.5 1.5 0 011.5-1.5h5l3 3v6.5a1.5 1.5 0 01-1.5 1.5h-6.5a1.5 1.5 0 01-1.5-1.5z" fill="none" stroke="#F0B429" strokeWidth="1.3" strokeLinejoin="round" />
-        <circle cx="50" cy="37" r="2.5" fill="none" stroke="#F0B429" strokeWidth="1.2" />
-        <path d="M46 43c0-2.2 1.8-3 4-3s4 .8 4 3" fill="none" stroke="#F0B429" strokeWidth="1.2" strokeLinecap="round" />
-        <text x="50" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Add</text>
+        <circle cx="50" cy="36" r="28" fill="rgba(13,148,136,0.06)" stroke="rgba(13,148,136,0.25)" strokeWidth="1.5" />
+        <path d="M44 42v-8a1.5 1.5 0 011.5-1.5h5l3 3v6.5a1.5 1.5 0 01-1.5 1.5h-6.5a1.5 1.5 0 01-1.5-1.5z" fill="none" stroke="#0D9488" strokeWidth="1.3" strokeLinejoin="round" />
+        <circle cx="50" cy="37" r="2.5" fill="none" stroke="#0D9488" strokeWidth="1.2" />
+        <path d="M46 43c0-2.2 1.8-3 4-3s4 .8 4 3" fill="none" stroke="#0D9488" strokeWidth="1.2" strokeLinecap="round" />
+        <text x="50" y="78" textAnchor="middle" fill="rgba(113,113,122,0.65)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Add</text>
 
         {/* Compute */}
-        <circle cx="190" cy="36" r="28" fill="rgba(240,180,41,0.06)" stroke="rgba(240,180,41,0.25)" strokeWidth="1.5" />
-        <rect x="181" y="27" width="18" height="18" rx="2" fill="none" stroke="#F0B429" strokeWidth="1.3" />
-        <line x1="185" y1="31" x2="195" y2="31" stroke="#F0B429" strokeWidth="1" strokeLinecap="round" />
-        <line x1="185" y1="35" x2="195" y2="35" stroke="#F0B429" strokeWidth="1" strokeLinecap="round" />
-        <line x1="185" y1="39" x2="191" y2="39" stroke="#F0B429" strokeWidth="1" strokeLinecap="round" />
-        <path d="M193 38l2 2 3-3" fill="none" stroke="#F0B429" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="190" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Compute</text>
+        <circle cx="190" cy="36" r="28" fill="rgba(13,148,136,0.06)" stroke="rgba(13,148,136,0.25)" strokeWidth="1.5" />
+        <rect x="181" y="27" width="18" height="18" rx="2" fill="none" stroke="#0D9488" strokeWidth="1.3" />
+        <line x1="185" y1="31" x2="195" y2="31" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" />
+        <line x1="185" y1="35" x2="195" y2="35" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" />
+        <line x1="185" y1="39" x2="191" y2="39" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" />
+        <path d="M193 38l2 2 3-3" fill="none" stroke="#0D9488" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="190" y="78" textAnchor="middle" fill="rgba(113,113,122,0.65)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Compute</text>
 
         {/* Comply */}
-        <circle cx="330" cy="36" r="28" fill="rgba(240,180,41,0.06)" stroke="rgba(240,180,41,0.25)" strokeWidth="1.5" />
-        <path d="M330 24c-6 3-10 5-10 12 0 6.5 4 10.5 10 13 6-2.5 10-6.5 10-13 0-7-4-9-10-12z" fill="none" stroke="#F0B429" strokeWidth="1.3" strokeLinejoin="round" />
-        <path d="M325 36l3 3 7-7" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="330" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Comply</text>
+        <circle cx="330" cy="36" r="28" fill="rgba(13,148,136,0.06)" stroke="rgba(13,148,136,0.25)" strokeWidth="1.5" />
+        <path d="M330 24c-6 3-10 5-10 12 0 6.5 4 10.5 10 13 6-2.5 10-6.5 10-13 0-7-4-9-10-12z" fill="none" stroke="#0D9488" strokeWidth="1.3" strokeLinejoin="round" />
+        <path d="M325 36l3 3 7-7" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="330" y="78" textAnchor="middle" fill="rgba(113,113,122,0.65)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Comply</text>
 
         {/* Payslip */}
-        <circle cx="470" cy="36" r="28" fill="rgba(240,180,41,0.06)" stroke="rgba(240,180,41,0.25)" strokeWidth="1.5" />
-        <path d="M462 42V28h10l4 4v10H462z" fill="none" stroke="#F0B429" strokeWidth="1.3" strokeLinejoin="round" />
-        <path d="M472 28v4h4" fill="none" stroke="#F0B429" strokeWidth="1.3" strokeLinejoin="round" />
-        <path d="M465 35h8M465 38h5" stroke="#F0B429" strokeWidth="1" strokeLinecap="round" />
-        <text x="470" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Payslip</text>
+        <circle cx="470" cy="36" r="28" fill="rgba(13,148,136,0.06)" stroke="rgba(13,148,136,0.25)" strokeWidth="1.5" />
+        <path d="M462 42V28h10l4 4v10H462z" fill="none" stroke="#0D9488" strokeWidth="1.3" strokeLinejoin="round" />
+        <path d="M472 28v4h4" fill="none" stroke="#0D9488" strokeWidth="1.3" strokeLinejoin="round" />
+        <path d="M465 35h8M465 38h5" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" />
+        <text x="470" y="78" textAnchor="middle" fill="rgba(113,113,122,0.65)" fontSize="10" fontFamily="'IBM Plex Mono',monospace">Payslip</text>
       </svg>
     </div>
   );
@@ -191,7 +166,7 @@ const FEATURES = [
     title: "Employee Management",
     desc: "Complete employee records with PAN, bank details, UAN, and ESI tracking. All in one place.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
       </svg>
     ),
@@ -200,7 +175,7 @@ const FEATURES = [
     title: "Auto Salary Computation",
     desc: "Basic, HRA, DA, special allowances calculated automatically with proration for mid-month joins.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="4" y="2" width="16" height="20" rx="2" /><line x1="8" y1="6" x2="16" y2="6" /><line x1="8" y1="10" x2="16" y2="10" /><line x1="8" y1="14" x2="12" y2="14" /><path d="M14 16l2 2 4-4" />
       </svg>
     ),
@@ -209,7 +184,7 @@ const FEATURES = [
     title: "PF/ESI/TDS Compliance",
     desc: "Indian statutory deductions computed per latest government rules and income tax slab rates.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" />
       </svg>
     ),
@@ -218,7 +193,7 @@ const FEATURES = [
     title: "Payslip Generation",
     desc: "Professional PDF payslips with full earnings, deductions, and net pay breakdown. Ready to share.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
       </svg>
     ),
@@ -227,7 +202,7 @@ const FEATURES = [
     title: "Leave & Attendance",
     desc: "Casual, sick, and earned leave tracking with balance management and attendance logs.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
       </svg>
     ),
@@ -236,7 +211,7 @@ const FEATURES = [
     title: "Reports & Analytics",
     desc: "Monthly and quarterly payroll reports with department breakdowns and compliance summaries.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
@@ -362,9 +337,9 @@ export default function LandingPage() {
 
       <header className={`landing-header ${vis}`}>
         <a href="https://doaide.com" className="landing-brand">
-          <RobotFace size={28} color="#F0B429" />
+          <BrandIcon size={28} />
           <span className="landing-brand-text">
-            DoAide <em>Payroll</em>
+            DoAide <span className="landing-brand-separator">|</span> <em>Payroll</em>
           </span>
         </a>
         <nav className="landing-nav">
@@ -376,11 +351,8 @@ export default function LandingPage() {
 
       <main>
         <section className={`landing-hero ${vis}`}>
-          <div className="landing-hero-robot-wrap">
-            <HeroRobot color="#F0B429" />
-          </div>
           <h1 className="landing-headline">
-            Indian Payroll, <span className="landing-gold">Made Simple</span>
+            Indian Payroll, <span className="landing-teal">Made Simple</span>
           </h1>
           <p className="landing-subtitle">
             Automated salary computation, PF/ESI/TDS compliance, and payslip
@@ -487,7 +459,7 @@ export default function LandingPage() {
           <div className="landing-tool-cards">
             <Link to="/calculator" className="landing-tool-card">
               <div className="landing-tool-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="4" y="2" width="16" height="20" rx="2" /><line x1="8" y1="6" x2="16" y2="6" /><line x1="8" y1="10" x2="10" y2="10" /><line x1="14" y1="10" x2="16" y2="10" /><line x1="8" y1="14" x2="10" y2="14" /><line x1="14" y1="14" x2="16" y2="14" /><line x1="8" y1="18" x2="16" y2="18" />
                 </svg>
               </div>
@@ -496,7 +468,7 @@ export default function LandingPage() {
             </Link>
             <Link to="/checker" className="landing-tool-card">
               <div className="landing-tool-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" />
                 </svg>
               </div>
@@ -505,7 +477,7 @@ export default function LandingPage() {
             </Link>
             <Link to="/payslip-generator" className="landing-tool-card">
               <div className="landing-tool-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
                 </svg>
               </div>
@@ -514,7 +486,7 @@ export default function LandingPage() {
             </Link>
             <Link to="/batch" className="landing-tool-card">
               <div className="landing-tool-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="3" width="20" height="18" rx="2" /><line x1="2" y1="9" x2="22" y2="9" /><line x1="8" y1="3" x2="8" y2="21" />
                 </svg>
               </div>
@@ -523,7 +495,7 @@ export default function LandingPage() {
             </Link>
             <Link to="/professional-tax" className="landing-tool-card">
               <div className="landing-tool-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" />
                 </svg>
               </div>
@@ -582,8 +554,9 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="landing-footer-bottom">
+          <span className="landing-doaide-badge">A DoAide Product</span>
           <a href="https://doaide.com" className="landing-footer-home">
-            <RobotFace size={16} color="#F0B429" />
+            <BrandIcon size={16} />
             doaide.com
           </a>
           <span className="landing-footer-copy">&copy; {new Date().getFullYear()} DoAide. All rights reserved.</span>

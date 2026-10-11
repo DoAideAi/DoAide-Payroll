@@ -27,10 +27,12 @@ export default function Shell({ children }) {
         <div className="shell-header-inner">
           <Link to="/" className="shell-brand">
             <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
-              <rect width="32" height="32" rx="6" fill="#F0B429" />
-              <text x="5" y="23" fontFamily="system-ui" fontWeight="bold" fontSize="18" fill="#1a1a2e">₹</text>
+              <rect width="32" height="32" rx="6" fill="#ffffff" fillOpacity="0.2" />
+              <text x="5" y="23" fontFamily="Inter, system-ui" fontWeight="bold" fontSize="18" fill="#ffffff">₹</text>
             </svg>
-            <span>DoAide Payroll</span>
+            <span>DoAide</span>
+            <span className="shell-brand-separator">|</span>
+            <span>Payroll</span>
           </Link>
           <nav className="shell-nav desktop-only">
             {NAV.map((n) => (
