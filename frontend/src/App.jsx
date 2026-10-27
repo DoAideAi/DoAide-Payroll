@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
@@ -30,6 +30,7 @@ import PayslipFormatGuide from "./pages/blog/PayslipFormatGuide";
 import PayrollProcessingGuide from "./pages/blog/PayrollProcessingGuide";
 import EpfCalculationGuide from "./pages/blog/EpfCalculationGuide";
 import ProfessionalTaxGuide from "./pages/blog/ProfessionalTaxGuide";
+import useSEO from "./hooks/useSEO";
 
 function Home() {
   const { user, loading } = useAuth();
@@ -51,6 +52,7 @@ function Protected({ children }) {
 }
 
 export default function App() {
+  useSEO(useLocation().pathname.replace(/\/+$/, "") || "/");
   return (
     <Routes>
       <Route path="/" element={<Home />} />
